@@ -22,7 +22,7 @@ services:
     depends_on:
       - db
     env_file:
-      - stack.env
+      - .env
 
 volumes:
   pgdata2:
