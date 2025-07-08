@@ -8,7 +8,7 @@ services:
     volumes:
       - pgdata2:/var/lib/postgresql/data
     ports:
-      - "{DB_EXT_PORT}:5432"
+      - "${DB_EXT_PORT}:5432"
 
   fastapi:
     build: .
@@ -16,7 +16,7 @@ services:
       - DB_HOST=db
       - DB_PORT=5432
     ports:
-      - "{FASTAPI_PORT}:8000"
+      - "${FASTAPI_PORT}:8000"
     volumes:
       - ./uploads:/app/uploads
     depends_on:
